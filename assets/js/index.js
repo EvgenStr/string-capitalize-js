@@ -12,13 +12,14 @@ const str = "some string i need";
 const capitalizeString = capitalize(str);
 
 console.log(capitalizeString);
+
 /**
  * capitalize string
  * @param {string} string 
  * @returns {string}
  */
 function capitalize(string) {
-  string = String.toString(string);
+  string = new String(string);
   let result = string.split(' ');
   result = result.map((text) => text[0].toUpperCase() + text.slice(1));
   return result.join(' ');
